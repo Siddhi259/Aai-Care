@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tablet Finder</title>
+</head>
+<body>
+
+<header>
+  <h1>Tablet Finder</h1>
+</header>
+
+<section>
+  <label for="symptoms">Select Symptoms:</label>
+  <select id="symptoms" onchange="showTablet()">
+    <option value="">Select a symptom</option>
+    <option value="headache">Headache</option>
+    <option value="fever">Fever</option>
+    <option value="cough">Cough</option>
+    <option value="nausea">Nausea</option>
+    <option value="acidity">Acidity</option>
+    <option value="loose motion">Loose motion</option>
+    <option value="body pain">Body pain</option>
+
+
+  </select>
+  
+  <div id="tabletResult"></div>
+</section>
+
+<script>
+function showTablet() {
+  var selectedSymptom = document.getElementById("symptoms").value;
+  var tabletResult = document.getElementById("tabletResult");
+
+  if (selectedSymptom === "headache") {
+    tabletResult.textContent = "Tablet: Paracetamol";
+  } else if (selectedSymptom === "fever") {
+    tabletResult.textContent = "Tablet: Ibuprofen";
+  } else if (selectedSymptom === "cough") {
+    tabletResult.textContent = "Tablet: Cough Syrup";
+  } else if (selectedSymptom === "nausea") {
+    tabletResult.textContent = "Tablet: Antinausea Medication";
+  } else if (selectedSymptom === "acidity") {
+    tabletResult.textContent = "Tablet: Antacid";
+  } else if (selectedSymptom === "loose motion") {
+    tabletResult.textContent = "Tablet: ORS";
+  } else if (selectedSymptom === "body pain") {
+    tabletResult.textContent = "Tablet: Neproxen";
+  } else {
+    tabletResult.textContent = "";
+  }
+}
+</script>
+
+</body>
+</html>
