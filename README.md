@@ -1,5 +1,4 @@
-# Mini-Hackathon Project: 
-# AAI Care
+# Mini-Hackathon Project: AAI Care
 
 ## About the Project
 
